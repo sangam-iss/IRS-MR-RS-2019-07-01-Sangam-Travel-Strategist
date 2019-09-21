@@ -1,0 +1,91 @@
+id,tags,name,price,opening_time,closing_time,hours_required,latitude,longitude,user_rating
+1,adventure-with-kids|recreation-without-nature,Wave House,40,11:30,21:30,3,1.2545,103.8137,4.2
+2,fun|adventure-with-kids|recreation-without-nature,Adventure Cove Waterpark,30,10:00,18:00,5,1.2588,103.8187,4
+3,fun|sightseeing|adventure-without-kids|adventure-with-kids,Universal Studios Singapore,79,10:00,18:00,6,1.2540,103.8238,4.8
+4,arts|education,Science Centre Singapore,10,10:00,18:00,2,1.3332,103.7362,4
+5,arts|education,Art Science Museum,40,10:00,19:00,1,1.2863,103.8593,4
+6,arts,Sri Mariamman Temple,10,07:00,21:00,1,1.2827,103.8451,4
+7,fun|adventure-without-kids|adventure-with-kids|recreation-without-nature,Water Sports Centre,18,07:00,20:00,2,1.3010,103.8729,4.3
+8,arts,China Cultural Centre,3.50,08:00,24:00,2,1.2981,103.8521,4.5
+9,arts,Buddha Tooth Relic Temple and Museum,10,07:00,19:00,2,1.2813,103.8445,4.5
+10,arts,Sultan Mosque,0,11:30,21:30,2,1.2902,103.8519,4
+11,arts|fun,Singapore Sports Museum,10,10:00,20:00,2,1.3014,103.8735,4
+12,arts,National Museum of Singapore,15,11:00,19:00,2,1.2966,103.8485,4.5
+13,arts,Singapore Art Museum,10,11:00,19:00,2,1.2973,103.8509,4
+14,arts,National Gallery Singapore,25,10:00,19:00,2,1.2897,103.8513,4.5
+15,arts|education,Singapore Discovery Centre,0,09:00,18:00,2,1.3327,103.6789,3.5
+16,arts,Baba House,0,11:30,21:30,1,1.2902,103.8519,4.5
+17,arts|sightseeing|nature-adventure|adventure-without-kids,Fort Canning,10,00:00,24:00,3,1.2945,103.8458,4.1
+18,arts|sightseeing|nature-adventure|adventure-without-kids,Fort Siloso,6,10:00,18:00,1,1.2592,103.8086,4
+19,nature|sightseeing|recreation-with-nature,East Coast Park,0,00:00,24:00,2,1.3008,103.9122,4.5
+20,sightseeing|nature|recreation-with-nature,Marina Bay Beach,0,00:00,24:00,2,1.2834,103.8608,4.2
+21,sightseeing|nature|recreation-with-nature,Palawan Beach,0,09:00,24:00,2,1.2483,103.8225,4.3
+22,sightseeing|nature|recreation-with-nature,Changi Beach,0,08:30,22:00,2,1.3909,103.9921,4
+23,sightseeing|nature|recreation-with-nature,Siloso Beach,0,11:00,23:00,3,1.2494,103.8303,4.4
+24,nature-adventure|adventure-without-kids,Bukit Timah Trekking,0,06:00,19:00,4,1.3294,103.8021,4.2
+25,nature-adventure|adventure-without-kids,Mount Faber,33.20,00:00,24:00,2,1.2738,103.8175,4.2
+26,shopping,Arab Street Shopping,0,09:00,22:00,3,1.3012,103.8592,4
+27,shopping,Bugis Street,0,09:00,22:00,3,1.3004,103.8549,4
+28,shopping,ChinaTown Shopping,0,10:00,22:00,3,1.2815,103.8448,4.2
+29,shopping,Little India,0,00:00,24:00,4,1.3066,103.8518,4.4
+30,fun|recreation-without-nature,Esplanade - Theatres on the Bay,0,06:00,24:00,3,1.2898,103.8558,4.6
+31,fun,Boat Quay,25,00:00,24:00,3,1.2860,103.8502,4.5
+32,fun,Clarke Quay,0,10:00,22:00,3,1.2906,103.8465,4.5
+33,sightseeing|nature|recreation-with-nature,Singapore Botanic Gardens,5,05:00,24:00,2,1.3938,103.8159,4.5
+34,sightseeing|nature|recreation-with-nature,Jurong Bird Park,25,08:00,18:00,2,1.3187,103.7064,4.4
+35,sightseeing|nature|recreation-with-nature|adventure-without-kids|adventure-with-kids|nature-adventure,Night Safari,70,19:00,24:00,2,1.4022,103.7881,4.4
+36,sightseeing|nature|recreation-with-nature,River Safari,28.90,10:00,19:00,3,1.4032,103.7907,4.4
+37,sightseeing|nature|recreation-with-nature,Singapore Zoo,37,08:00,18:00,3,1.4043,103.7930,4.5
+38,sightseeing|nature|recreation-with-nature,Sungei Buloh Wetland Reserve,3,07:00,19:00,3,1.4480,103.7245,4.4
+39,sightseeing|recreation-without-nature,Marina Bay Sands,0,00:00,24:00,2,1.2823,103.8585,4.8
+40,sightseeing|nature|recreation-with-nature,Gardens by the Bay,28,05:00,24:00,2,1.2816,103.8636,4.8
+41,shopping,Orchard Road,0,10:00,22:00,3,1.3048,103.8318,4.0
+42,sightseeing|recreation-without-nature|adventure-with-kids,Singapore Flyer,33,08:30,22:30,2,1.2893,103.8631,4.7
+43,sightseeing|nature|recreation-with-nature,Merlion Park,0,00:00,24:00,2,1.2879,103.8517,4.6
+44,sightseeing|recreation-without-nature,S.E.A Aquarium Singapore,40,10:00,19:00,2,1.2583,103.8205,4.7
+45,sightseeing|nature|recreation-with-nature,West Coast Park,0,00:00,24:00,2,1.2914,103.7667,4.3
+46,arts,The Maritime Experiential Museum,12,10:00,19:00,2,1.2582,103.8205,4.2
+47,sightseeing|nature|recreation-with-nature,Dolphin Island,58,10:00,18:00,1,1.2489,103.8100,4.5
+48,arts|fun|recreation-without-nature,Trick Eye Museum,25,10:00,21:00,2,1.2570,103.8205,4.3
+49,sightseeing|recreation-without-nature,Cloud Forest,28,09:00,21:00,2,1.2839,103.8660,4.5
+50,sightseeing|recreation-without-nature,Singapore Cable Car,29.50,09:00,22:00,2,1.2643,103.8164,4.6
+51,arts,Chinatown Heritage Centre,20,09:30,18:30,2,1.2834,103.8422,4.3
+52,sightseeing|recreation-without-nature,Sentosa Merlion Tower,15,10:00,08:00,2,1.2533,103.8567,4.5
+53,sightseeing|recreation-without-nature,Marina Bay Sands Skypark,20,09:30,23:00,2,1.2850,103.8588,4.6
+54,nature|recreation-with-nature,The Southern Ridges,0,00:00,24:00,2,1.2801,103.8008,4.5
+55,sightseeing|recreation-without-nature,The Pinnacle @ Duxton,6,09:00,21:30,1,1.2770,103.8391,3.8
+56,adventure-with-kids,Henderson Waves,0,00:00,24:00,2,1.2760,103.8132,3.9
+57,arts|recreation-without-nature,Fort Canning Bunker,0,09:30,17:50,2,1.2961,103.8440,3.6
+58,sightseeing|recreation-without-nature,Waterfront Promenade,0,00:00,24:00,1,1.3363,103.7024,4.5
+59,arts,Thian Hock Keng Temple,0,07:30,17:30,1,1.2810,103.8454,3.9
+60,arts|sightseeing,The Helix Bridge,0,00:00,24:00,1,1.2876,103.8584,4.2
+61,fun,Robertson Quay,4,00:00,24:00,1,1.2916,103.8353,3.8
+62,sightseeing|nature|recreation-with-nature,Flower Dome,12,09:00,21:00,2,1.2846,103.8625,4.5
+63,sightseeing|nature|recreation-with-nature,OCBC Skyway,8,05:00,02:00,1,1.2818,103.8620,4.7
+64,arts|recreation-without-nature,Imbiah Lookout,16,10:00,20:00,2,1.2548,103.8176,3.8
+65,arts|sightseeing|nature|recreation-with-nature,Butterfly Park and Insect Kingdom,12,09:30,19:00,2,1.2554,103.8168,4
+66,recreation-without-nature,The Live Turtle and Tortoise Museum,5,10:00,18:00,1,1.4138,103.8270,3.9
+67,arts,Chijmes,0,06:00,22:00,1,1.2951,103.8518,4
+68,sightseeing|nature|recreation-with-nature,Marina Barrage,0,00:00,24:00,2,1.2805,103.8689,4.3
+69,shopping,Emerald Hill,0,12:00,03:00,2,1.3030,103.8218,3.9
+70,recreation-without-nature|sightseeing,Raffles Hotel Arcade,0,10:00,22:00,2,1.2957,103.8275,4.1
+71,arts,Sri Veeramakaliamman Temple,0,05:00,21:00,1,1.3079,103.8500,4
+72,arts,Red Dot Design Museum,11.80,10:00,20:00,2,1.2801,103.8541,3.5
+73,recreation-with-nature,Bukit Brown Cemetery,0,00:00,24:00,2,1.3361,103.8207,3.4
+74,arts|sightseeing,Statue of Raffles,0,00:00,24:00,1,1.2877,103.8485,3.5
+75,shopping,Sago Street (Street Of The Dead),0,09:00,22:00,2,1.2810,103.8418,3.3
+76,nature|adventure-with-kids|recreation-with-nature,Bukit Chermin Boardwalk,0,00:00,24:00,2,1.2649,103.8063,3.2
+77,fun|adventure-with-kids|recreation-with-nature,Marina Bay Cruise Centre,8,00:00,24:00,2,1.2688,103.8595,4.1
+78,arts|sightseeing|recreation-without-nature,Asia Square Tower,0,10:00,22:00,2,1.2785,103.8489,2.9
+79,nature-adventure|adventure-without-kids,Pulau Ubin,0,00:00,24:00,10,1.4135,103.9243,4.5
+80,arts,Sri Krishnan Temple,0,06:00,21:00,1,1.3005,103.8504,4.4
+81,arts|recreation-without-nature,Sands Expo and Convention Center,0,09:00,22:00,2,1.2826,103.8593,4.2
+82,sightseeing|recreation-without-nature,Fountain of Wealth,0,10:00,19:30,2,1.2947,103.8567,4.5
+83,arts,Sri Srinivasa Perumal Temple,0,05:30,21:00,1,1.3132,103.8538,4.3
+83,arts,Haw Par Villa,0,09:00,22:00,2,1.2842,103.7803,4.6
+84,sightseeing|recreation-without-nature,Magnificent Singapore City Skyline,45,09:00,18:30,2,1.3363,103.7024,4.5
+85,fun,Dinner Cruise - Romance Under Sail,200,19:30,24:00,4,1.2490,103.8175,4.6
+86,arts|recreation-without-nature,Madame Tussauds Singapore,25,10:00,21:00,2,1.2548,103.8154,4.4
+87,nature|recreation-with-nature,National Orchid Garden,5,08:30,19:00,2,1.3116,103.8127,4.6
+88,nature|recreation-with-nature,MacRitchie Reservoir,0,07:00,19:00,2,1.3486,103.8044,4.4
+89,arts|education,Asian Civilisations Museum,0,10:00,19:00,2,1.2874,103.8491,4.3

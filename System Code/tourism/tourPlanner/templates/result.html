@@ -1,0 +1,282 @@
+<html>
+<head>
+    <title>SANGAM Tour Planner</title>
+    {% load static %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+.flip-card {
+  background-color: transparent;
+  /*width: 50%;*/
+  height: 10em;
+  /*margin-left: 25%; 
+  border: 1px solid #080101;*/
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-image: radial-gradient( rgb(8, 10, 10), rgb(22, 26, 22));
+  color: white;
+}
+
+/* Style the back side */
+.flip-card-back {
+  
+  background-image: radial-gradient(   rgb(96, 134, 216), rgb(62, 211, 211));
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+
+<style>
+.button {
+  background-color: #004A7F;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+@keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+</style>
+
+</head>
+<body background={% static 'Singapore-tourism.jpg' %}>
+  <div style="margin-top: 10px; margin-left:10px;" >
+    <a style=" position:absolute top:10px; right:10px;" class="button" href="{% url 'index'%}">Home</a>
+  </div>
+
+  {% if not budget %}
+  <div style="position: absolute; top:10px; right:10px;">
+  <form action="{% url 'budget'%}" method="get" onsubmit='disableButton()'>
+      <button  id="btn" type="submit" class="button">Budget Travellers Click Here!</button>
+  </form>
+</div>
+  {% endif %}
+  <script>
+      function disableButton() {
+        var btn = document.getElementById('btn');
+        btn.disabled = true;
+        btn.innerText = 'Please wait...'
+      }
+    </script>
+
+
+
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+      {% for day in list_result %}
+      {% if forloop.counter < 2 %}
+    <li data-target="#demo" data-slide-to="{{day.day}}" class="active"></li>
+    {% else %}
+
+    <li data-target="#demo" data-slide-to="{{day.day}}"   ></li>
+
+    {% endif %}
+
+      {% endfor %}
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+      {% for day in list_result %}
+
+      {% if forloop.counter < 2 %}
+
+    <div class="carousel-item active" >
+
+      <div class="container">
+        
+        <div   style="border:1px solid black;margin-left: 10%;margin-right: 10%; background-image: radial-gradient( rgb(51, 51, 59),  rgba(72, 228, 72, 0));">
+            <div class="row">
+            <div  class="col-sm-3">
+    
+                <h1 style="padding-left: 2%"> Day - {{day.day|add:1}} </h1>
+            </div>
+        </div>
+        <div class="row">
+        {% for slot in day.slots %}
+    
+        <div class="col-sm-3">
+        <div class="flip-card" style="padding: 5%">
+            <div class="flip-card-inner">
+              <div style="display:table;text-align:center;"  class="flip-card-front">
+                <h4  style="display:table-cell; vertical-align:middle;"> {{slot.location.name}}</h4>
+              </div>
+              <div class="flip-card-back">
+                <h5>{{slot.location.name}}</h5>
+                <ul>
+                  <li>Price : {{slot.location.price}}</li>
+                  <li>Rating : {{slot.location.rating}}</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+          {%endfor%}
+        </div>
+        <div class="row">
+            <div  class="col-sm-12">
+            <iframe style="padding: 5%" width="800" height="450"
+    
+    
+      frameborder="0" style="border:0"
+      src={{day.googleString}} allowfullscreen>
+    </iframe>
+            </div>
+        </div>
+        </div>
+        <br>
+          
+        </div>
+
+
+
+
+    </div>
+
+    {% else %}
+    <div class="carousel-item ">
+
+        <div class="container">
+          
+          <div   style="border:1px solid black;margin-left: 10%;margin-right: 10%; background-image: radial-gradient( rgb(51, 51, 59),  rgba(72, 228, 72, 0));">
+              <div class="row">
+              <div  class="col-sm-3">
+      
+                  <h1 style="padding-left: 2%"> Day - {{day.day|add:1}} </h1>
+              </div>
+          </div>
+          <div class="row">
+          {% for slot in day.slots %}
+      
+          <div class="col-sm-3">
+          <div class="flip-card" style="padding: 5%">
+              <div class="flip-card-inner">
+                <div style="display:table;text-align:center;"  class="flip-card-front">
+                  <h4  style="display:table-cell; vertical-align:middle;"> {{slot.location.name}}</h4>
+                </div>
+                <div class="flip-card-back">
+                  <h5>{{slot.location.name}}</h5>
+                  <ul>
+                      <li>Price : {{slot.location.price}}</li>
+                      <li>Rating : {{slot.location.rating}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+            {%endfor%}
+          </div>
+          <div class="row">
+              <div  class="col-sm-12">
+              <iframe style="padding: 5%" width="800" height="450"
+      
+      
+        frameborder="0" style="border:0"
+        src={{day.googleString}} allowfullscreen>
+      </iframe>
+              </div>
+          </div>
+          </div>
+          <br>
+            
+          </div>
+  
+  
+  
+  
+      </div>
+
+      {% endif %}
+
+    {%endfor%}
+
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev" >
+    <span  class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

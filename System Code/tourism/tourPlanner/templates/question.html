@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SANGAM Tour Planner</title>
+	{% load static %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'questionFiles/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'questionFiles/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'questionFiles/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'questionFiles/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'questionFiles/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'questionFiles/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'questionFiles/vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'questionFiles/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'questionFiles/vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'questionFiles/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'questionFiles/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="{%url 'answer'%}" method="POST" onsubmit='disableButton()'>{% csrf_token %}
+					<span class="login100-form-title p-b-34">
+							{{question}}
+					</span>
+					{% if 'number' in type %}
+					<div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" >
+						<input class="input100"  name="answer" type="{{type}}" placeholder="Input here" required>
+					
+					
+						
+					
+					
+					</div>
+					{% else %}
+					<div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" >
+							{%for option in options%}
+						<input id="{{option.value}}"  name="answer" type="{{type}}" value="{{option.value}}" required>
+						<label for="{{option.value}}"> {{option.name}} </label>  <br>
+					{%endfor%}
+					
+						<span class="focus-input100"></span>
+					</div>
+					{%endif%}
+					
+					<div class="container-login100-form-btn">
+						<button id="btn" type="submit" class="login100-form-btn">
+							Submit
+						</button>
+					</div>
+				</form>
+				<script>
+						function disableButton() {
+							var btn = document.getElementById('btn');
+							btn.disabled = true;
+							btn.innerText = 'Please wait...'
+						}
+					</script>
+
+				<div class="login100-more" style="background-image: url('{% static 'questionFiles/images/bg-01.jpg' %}');"></div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+
+	
+<!--===============================================================================================-->
+	<script src="{% static 'questionFiles/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'questionFiles/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'questionFiles/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'questionFiles/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'questionFiles/vendor/select2/select2.min.js' %}"></script>
+
+<!--===============================================================================================-->
+	<script src="{% static 'questionFiles/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'questionFiles/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'questionFiles/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'questionFiles/js/main.js' %}"></script>
+
+</body>
+</html>
