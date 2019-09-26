@@ -28,7 +28,7 @@ Please refer to the below URL for Video Report.
 
 Please refer to the below URL for the User Installation Guide.
 
-[Installation Guide](https://github.com/sangam-iss/iss-mrrs/blob/master/Project%20Report/installation_guide.docx)
+[Installation Guide](https://github.com/sangam-iss/iss-mrrs/blob/master/Project%20Report/installation_guide.pdf)
 
 
 # **Project Report**
